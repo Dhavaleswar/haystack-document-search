@@ -10,8 +10,19 @@ python = ">=3.8.5,<3.13"
 fastapi = "^0.104.0"
 uvicorn = "^0.23.2"
 pandas = "2.0.3"
+torchvision = { version = "0.15.1", source = "torch-stable-cpu" }
+torch = { version = "2.0.0", source = "torch-stable-cpu" }
+farm-haystack = "^1.21.2"
+faiss-cpu = "^1.7.4"
+sqlalchemy = "^2.0.22"
+sentence-transformers = "^2.2.2"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "torch-stable-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
